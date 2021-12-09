@@ -4,3 +4,18 @@
 
 ##### 2. Now that you’ve thought about the structure of your application, set up the folder structure and start creating the components. We suggest you use functional components and therefore hooks in this project.
 ##### 3. Style your application so you can show it off!
+
+Step One: 
+- Create cards for 3 pokemon (pokemon theme)
+  - hard coded components
+  - each has a state of clicked on, or not
+- When clicked or page loaded (so add some type of event listener) it must shuffle the order displayed
+  - this will, i imagine, have to be implemented in the parent component
+- Each valid click (ie not clicked before) will be sent upwards to app to add a score point
+
+Components: 
+- App
+  - GameField (all child cards will exist in same file)
+    - Pickachu Card
+    - Charmander Card
+    - Tortoise Card

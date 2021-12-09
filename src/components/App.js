@@ -1,5 +1,6 @@
 import "../styles/App.css";
 import React from "react";
+import GameField from "./GameField";
 
 class App extends React.Component {
     constructor(props) {
@@ -15,6 +16,8 @@ class App extends React.Component {
             <div className="App">
                 <WebsiteTitle/>
                 <Scoreboard currentScore={this.state.currentScore} highScore={this.state.currentScore}/>
+
+                <GameField/>
             </div>
         );
     }
