@@ -8,8 +8,38 @@
 }
 
 .pokemon {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 10%;
 
     border: black solid 2px;
+}
+
+.pokemon:hover {
+    border: yellow solid 2px;
+}
+
+.Charmander {
+    width: 100%;
+    height: 100%;
+
+    background: url("../images/char.png");
+    background-size: 100% 100%;
+}
+
+.Pickachu {
+    width: 100%;
+    height: 100%;
+
+    background: url("../images/pik.png");
+    background-size: 100% 100%;
+}
+
+.Squirtle {
+    width: 100%;
+    height: 100%;
+
+    background: url("../images/squ.png");
+    background-size: 100% 100%;
 }

@@ -11,7 +11,7 @@ class GameField extends React.Component {
     }
 
     generatePokemon() {
-        let defaultPokemons = ["Pickachu", "Charmander", "Tortoise", "Tito"];
+        let defaultPokemons = ["Pickachu", "Charmander", "Squirtle"];
         defaultPokemons = this.shuffleArray(defaultPokemons);
 
         let pokemonComponents = [];
@@ -80,7 +80,7 @@ class GameField extends React.Component {
 const Pokemon = (props) => {
     return (
         <div className="pokemon" onClick={props.onClick}>
-            {props.name}
+            <div className={props.name}/>
         </div>
     )
 }
