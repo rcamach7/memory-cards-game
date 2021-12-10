@@ -12,17 +12,22 @@ class App extends React.Component {
         this.handleScoreReporting = this.handleScoreReporting.bind(this);
     }
 
-    handleScoreReporting(currentScore) {
+    handleScoreReporting(currentScoreIn) {
         this.setState({
-            currentScore: currentScore,
+            currentScore: currentScoreIn,
         })
+        if (currentScoreIn > this.state.highScore) {
+            this.setState({
+                highScore: currentScoreIn,
+            })
+        }
     }
 
     render() {
         return (
             <div className="App">
                 <WebsiteTitle/>
-                <Scoreboard currentScore={this.state.currentScore} highScore={this.state.currentScore}/>
+                <Scoreboard currentScore={this.state.currentScore} highScore={this.state.highScore}/>
 
                 <GameField reportScore = {this.handleScoreReporting}/>
             </div>
