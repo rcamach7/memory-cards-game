@@ -1,6 +1,7 @@
 import "../styles/App.css";
 import React from "react";
 import GameField from "./GameField";
+import title from "../images/title.png"
 
 class App extends React.Component {
     constructor(props) {
@@ -30,6 +31,7 @@ class App extends React.Component {
                 <Scoreboard currentScore={this.state.currentScore} highScore={this.state.highScore}/>
 
                 <GameField reportScore = {this.handleScoreReporting}/>
+                <p className="copyright">Copyright © 2021 Ricardo Camacho Mireles</p>
             </div>
         );
     }
@@ -38,8 +40,7 @@ class App extends React.Component {
 const WebsiteTitle = () => {
     return (
         <div className="WebsiteTitle">
-            <h1>Welcome To Ricardo's Memory Game</h1>
-            <h3>Get points by clicking on an image, but don't click on any more than once!</h3>
+            <img src={title} alt=""/>
         </div>
     )
 }
@@ -47,7 +48,7 @@ const WebsiteTitle = () => {
 const Scoreboard = (props) => {
     return (
         <div className="Scoreboard">
-            <p>Current Score: {props.currentScore} | High Score: {props.highScore}</p>
+            <h3>Current Score: {props.currentScore} | High Score: {props.highScore}</h3>
         </div>
     )
 }

@@ -1,9 +1,35 @@
+body {
+    background-color: #ffffff;
+    font-family: "American Typewriter", serif;
+    margin: 0;
+
+}
+
+.WebsiteTitle {
+    background-color: #fd4040;
+}
+
+.Scoreboard {
+    height: 25px;
+    background-color: black;
+
+    color: white;
+}
+
+.Scoreboard h3 {
+    margin-top: 0;
+}
+
 .App {
     width: 100%;
-    height: 750px;
+    height: 100%;
     margin: 0 auto;
 
     text-align: center;
+}
 
-    background-color: #fff4ef;
+.copyright {
+    bottom: 2px;
+    position: fixed;
+    width: 100%;
 }

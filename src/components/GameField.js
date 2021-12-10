@@ -11,7 +11,7 @@ class GameField extends React.Component {
     }
 
     generatePokemon() {
-        let defaultPokemons = ["Pickachu", "Charmander", "Squirtle"];
+        let defaultPokemons = ["Pickachu", "Charmander", "Squirtle", "Snorlax", "Houndor"];
         defaultPokemons = this.shuffleArray(defaultPokemons);
 
         let pokemonComponents = [];
