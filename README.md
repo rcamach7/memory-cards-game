@@ -15,7 +15,8 @@ npm run start
 
 #### Built Using:
 
-- React Framework (components, lifecycles, state management)
+- React Framework (components, lifecycles, state management, event handlers)
+- PokeAPI
 - Javascript
 - HTML
 - CSS

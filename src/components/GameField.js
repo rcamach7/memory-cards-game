@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/GameField.css"
 
+
 class GameField extends React.Component {
     constructor(props) {
         super(props);

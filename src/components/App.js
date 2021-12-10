@@ -1,7 +1,7 @@
 import "../styles/App.css";
 import React from "react";
-import GameField from "./GameField";
 import title from "../images/title.png"
+import GameFieldAPI from "./GameFieldAPI";
 
 class App extends React.Component {
     constructor(props) {
@@ -28,9 +28,10 @@ class App extends React.Component {
         return (
             <div className="App">
                 <WebsiteTitle/>
+
                 <Scoreboard currentScore={this.state.currentScore} highScore={this.state.highScore}/>
 
-                <GameField reportScore = {this.handleScoreReporting}/>
+                <GameFieldAPI reportScore = {this.handleScoreReporting} />
                 <p className="copyright">Copyright © 2021 Ricardo Camacho Mireles</p>
             </div>
         );
