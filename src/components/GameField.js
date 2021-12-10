@@ -34,20 +34,21 @@ class GameField extends React.Component {
     }
 
     clickedMe(name) {
-
         const indexOfPokemon = this.state.clickedPokemon.indexOf(name);
         if (indexOfPokemon === -1) {
             // True if never been clicked before
-            const updatedClicked = this.state.clickedPokemon.slice();
+            const updatedClicked = this.state.clickedPokemon;
             updatedClicked.push(name);
             this.setState({
                 clickedPokemon: updatedClicked,
-            })
+            });
+            this.props.reportScore(this.state.clickedPokemon.length);
         } else {
             alert("You have already clicked me! Game Reset");
             this.setState({
                 clickedPokemon: [],
             })
+            this.props.reportScore(0);
         }
 
         // Randomize the order of pokemon after every click.

@@ -9,6 +9,13 @@ class App extends React.Component {
             currentScore: 0,
             highScore: 0,
         }
+        this.handleScoreReporting = this.handleScoreReporting.bind(this);
+    }
+
+    handleScoreReporting(currentScore) {
+        this.setState({
+            currentScore: currentScore,
+        })
     }
 
     render() {
@@ -17,7 +24,7 @@ class App extends React.Component {
                 <WebsiteTitle/>
                 <Scoreboard currentScore={this.state.currentScore} highScore={this.state.currentScore}/>
 
-                <GameField/>
+                <GameField reportScore = {this.handleScoreReporting}/>
             </div>
         );
     }
